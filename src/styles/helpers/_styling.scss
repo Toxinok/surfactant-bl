@@ -1,0 +1,54 @@
+.menu-icon {
+	z-index: 12;
+	position: relative;
+	display: block;
+
+	width: 40px;
+	height: 26px;
+
+	background: transparent;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+
+	color: #000;
+	font-size: 0;
+
+	transition: all 0.25s ease-in-out;
+
+	@media screen and (min-width: 1201px) {
+		display: none;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		display: block;
+
+		width: 100%;
+		height: 4px;
+
+		background: currentColor;
+		transform: translate(-50%, -50%);
+		transition: transform 0.25s ease-in-out;
+	}
+
+	&:hover {
+		color: #3b8d64;
+	}
+
+	&._active {
+		border-color: transparent;
+
+		&::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+	}
+}

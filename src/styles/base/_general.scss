@@ -1,0 +1,42 @@
+html {
+	overflow-x: hidden;
+
+	@media screen and (max-width: 1200px) {
+		font-size: 0.9px;
+	}
+
+	@media screen and (max-width: 992px) {
+		font-size: 0.8px;
+	}
+
+	@media screen and (max-width: 768px) {
+		font-size: 0.75px;
+	}
+
+	@media screen and (max-width: 576px) {
+		font-size: 0.7px;
+	}
+}
+
+body {
+	overflow-x: hidden;
+
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	color: #171717;
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+._container {
+	@include container();
+	@include xs(max-width, 290px);
+	@include sm(max-width, 510px);
+	@include md(max-width, 690px);
+	@include lg(max-width, 930px);
+	@include xl(max-width, 1180px);
+	@media screen and (min-width: 1461px) {
+		max-width: 1430px;
+	}
+}

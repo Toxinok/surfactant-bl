@@ -1,0 +1,16 @@
+@import 'resets/normalize';
+@import 'resets/reset';
+@import 'resets/typography';
+
+@import 'base/fonts';
+@import 'base/smart-grid';
+
+@import 'helpers/fontawesome';
+@import 'helpers/styling';
+
+@import 'base/general';
+
+@import 'partials/header';
+@import 'partials/footer';
+
+@import 'pages/index';
